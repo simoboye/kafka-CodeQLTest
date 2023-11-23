@@ -1,0 +1,11 @@
+<!ELEMENT qhelp (overview,recommendation,example,references)>
+<!ELEMENT overview (p)>
+<!ELEMENT p (#PCDATA)>
+<!ELEMENT recommendation (p)>
+<!ELEMENT example (p,sample)>
+<!ELEMENT sample EMPTY>
+<!ATTLIST sample src CDATA #REQUIRED>
+<!ELEMENT references (li)>
+<!ELEMENT li (#PCDATA|a)*>
+<!ELEMENT a (#PCDATA)>
+<!ATTLIST a href CDATA #REQUIRED>

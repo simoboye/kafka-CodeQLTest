@@ -1,0 +1,31 @@
+<!DOCTYPE qhelp PUBLIC
+  "-//Semmle//qhelp//EN"
+  "qhelp.dtd">
+<qhelp>
+
+<overview>
+<p>
+State of field is escaping.
+</p>
+</overview>
+
+<recommendation>
+<p>
+Add a private modifier to the field declaration. If the state of the field must be exposed, consider creating syncronized getters and setters.
+</p>
+</recommendation>
+
+<example>
+<p>
+Here is an example of defining a field as a private method, and with getters and setters in a syncronized way.
+</p>
+<sample src="examples/EscapingExample.java" />
+</example>
+
+<references>
+<li>
+Java Doc:
+<a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/interfere.html">Example of interference in JavaDoc</a>.
+</li>
+</references>
+</qhelp>

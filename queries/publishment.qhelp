@@ -1,0 +1,30 @@
+<!DOCTYPE qhelp PUBLIC
+  "-//Semmle//qhelp//EN"
+  "qhelp.dtd">
+<qhelp>
+
+<overview>
+<p>The field might not safe published.</p>
+<p>For a field to be safely published, the Initialization must happen before the publication of the field.</p>
+<p>All the field in an object must be correctly initialized before it is made accessible as a reference to an object.</p>
+</overview>
+
+<recommendation>
+<p>Make the fields volatile or final.</p>
+</recommendation>
+
+<example>
+<p>
+Here is an example of safe publishment
+</p>
+<sample src="examples/PublishmentExample.java" />
+</example>
+
+
+<references>
+<li>
+Safe Publication and Safe Initialization in Java:
+<a href="https://shipilev.net/blog/2014/safe-public-construction/">More about safe publicaiton by Aleksey Shipilёv</a>.
+</li>
+</references>
+</qhelp>

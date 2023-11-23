@@ -1,0 +1,33 @@
+<!DOCTYPE qhelp PUBLIC
+  "-//Semmle//qhelp//EN"
+  "qhelp.dtd">
+<qhelp>
+
+<overview>
+<p>
+Here, it is written to a mutable field, and it is not inside of a synchronized block.
+This can cause problems with synchronization.
+</p>
+</overview>
+
+<recommendation>
+<p>
+Consider the field write to be inside of a synchronized block.
+</p>
+</recommendation>
+
+<example>
+<p>
+Here is an example of using the synchronized keyword 
+</p>
+<sample src="examples/SynchronizedExample.java" />
+</example>
+
+
+<references>
+<li>
+Java Doc:
+<a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html">More about synchronized in JavaDoc</a>.
+</li>
+</references>
+</qhelp>

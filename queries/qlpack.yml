@@ -1,0 +1,3 @@
+name: sboj/queries
+dependencies:
+  codeql/java-all: ^0.7.3
