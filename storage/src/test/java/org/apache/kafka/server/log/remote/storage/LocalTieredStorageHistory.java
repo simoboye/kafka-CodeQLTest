@@ -41,7 +41,7 @@ import static org.slf4j.LoggerFactory.getLogger;
  * Events from an instance of storage are captured by the {@link LocalTieredStorageHistory} after
  * {@link LocalTieredStorageHistory#listenTo(LocalTieredStorage)} is called.
  */
-/* @ThreadSafe */
+@ThreadSafe
 public final class LocalTieredStorageHistory {
     private static final int HARD_EVENT_COUNT_LIMIT = 1_000_000;
 

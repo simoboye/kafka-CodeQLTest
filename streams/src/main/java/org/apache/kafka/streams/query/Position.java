@@ -41,6 +41,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * reference.
  */
 @Evolving
+@ThreadSafe
 public class Position {
 
     private final ConcurrentHashMap<String, ConcurrentHashMap<Integer, Long>> position;

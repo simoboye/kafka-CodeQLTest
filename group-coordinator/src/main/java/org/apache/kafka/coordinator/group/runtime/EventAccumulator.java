@@ -42,6 +42,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * There are a few examples about how to use it in the unit tests.
  */
+@ThreadSafe
 public class EventAccumulator<K, T extends EventAccumulator.Event<K>> implements AutoCloseable {
 
     /**

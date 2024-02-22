@@ -24,6 +24,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * Utility class that tracks the current state and the duration of time spent in each state.
  * This class is threadsafe.
  */
+@ThreadSafe
 public class StateTracker {
 
     private final AtomicReference<StateChange> lastState = new AtomicReference<>(new StateChange());

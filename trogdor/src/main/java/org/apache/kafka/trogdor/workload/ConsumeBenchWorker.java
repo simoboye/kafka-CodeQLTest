@@ -493,6 +493,7 @@ public class ConsumeBenchWorker implements TaskWorker {
     /**
      * A thread-safe KafkaConsumer wrapper
      */
+    @ThreadSafe
     private static class ThreadSafeConsumer {
         private final KafkaConsumer<byte[], byte[]> consumer;
         private final String clientId;
