@@ -27,6 +27,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import javax.annotation.concurrent.ThreadSafe;
 
 import static java.util.Arrays.stream;
 import static java.util.Collections.unmodifiableMap;

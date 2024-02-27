@@ -30,6 +30,7 @@ import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
+import javax.annotation.concurrent.ThreadSafe;
 
 /**
  * A concurrent event accumulator which group events per key and ensure that only one
