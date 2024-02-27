@@ -63,8 +63,8 @@ jobs:
         config: |
           disable-default-queries: true
           queries: ./queries
-          - exclude:
-              id: ./queries/codeql-repo
+          # - exclude:
+          #     id: ./queries/codeql-repo
             # - uses: ./queries/synchronized.ql
             # - uses: ./queries/escaping.ql
             # - uses: ./queries/immutable-fields.ql
