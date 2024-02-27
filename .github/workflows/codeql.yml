@@ -62,11 +62,31 @@ jobs:
         # queries: security-extended,security-and-quality
         config: |
           disable-default-queries: true
-          queries:
-            - uses: ./queries/synchronized.ql
-            - uses: ./queries/escaping.ql
-            - uses: ./queries/immutable-fields.ql
-            - uses: ./queries/publishment.ql
+          queries:          
+            - uses: ./queries/codeql-repo/BusyWait.ql
+            - uses: ./queries/codeql-repo/CallsToConditionWait.ql
+            - uses: ./queries/codeql-repo/CallsToRunnableRun.ql
+            - uses: ./queries/codeql-repo/DateFormatThreadUnsafe.ql
+            - uses: ./queries/codeql-repo/DoubleCheckedLocking.ql
+            - uses: ./queries/codeql-repo/DoubleCheckedLockingWithInitRace.ql
+            - uses: ./queries/codeql-repo/EmptyRunMethodInThread.ql
+            - uses: ./queries/codeql-repo/FutileSynchOnField.ql
+            - uses: ./queries/codeql-repo/InconsistentAccess.ql
+            - uses: ./queries/codeql-repo/LazyInitStaticField.ql
+            - uses: ./queries/codeql-repo/NonSynchronizedOverride.ql
+            - uses: ./queries/codeql-repo/NotifyNotNotifyAll.ql
+            - uses: ./queries/codeql-repo/NotifyWithoutSynch.ql
+            - uses: ./queries/codeql-repo/PriorityCalls.ql
+            - uses: ./queries/codeql-repo/SleepWithLock.ql
+            - uses: ./queries/codeql-repo/StartInConstructor.ql
+            - uses: ./queries/codeql-repo/SynchOnBoxedType.ql
+            - uses: ./queries/codeql-repo/SynchSetUnsynchGet.ql
+            - uses: ./queries/codeql-repo/SynchWriteObject.ql
+            - uses: ./queries/codeql-repo/UnreleasedLock.ql
+            - uses: ./queries/codeql-repo/WaitOutsideLoop.ql
+            - uses: ./queries/codeql-repo/WaitWithTwoLocks.ql
+            - uses: ./queries/codeql-repo/YieldCalls.ql
+
 
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
     # If this step fails, then you should remove it and run the build manually (see below)
