@@ -19,7 +19,7 @@ package org.apache.kafka.connect.runtime;
 import org.apache.kafka.connect.runtime.AbstractStatus.State;
 
 import java.util.concurrent.atomic.AtomicReference;
-import javax.annotation.concurrent.ThreadSafe;
+// import javax.annotation.concurrent.ThreadSafe;
 
 /**
  * Utility class that tracks the current state and the duration of time spent in each state.
