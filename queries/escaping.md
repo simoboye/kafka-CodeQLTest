@@ -3,11 +3,11 @@ State of field is escaping.
 
 
 ## Recommendation
-Add a private modifier to the field declaration. If the state of the field must be exposed, consider creating syncronized getters and setters.
+Add a private modifier to the field declaration. If the state of the field must be exposed, consider creating synchronized getters and setters.
 
 
 ## Example
-Here is an example of defining a field as a private method, and with getters and setters in a syncronized way.
+Here is an example of defining a field as a private method, and with getters and setters in a synchronized way.
 
 
 ```java

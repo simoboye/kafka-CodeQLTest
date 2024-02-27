@@ -22,6 +22,6 @@ predicate isDefaultValue(Field f) {
 }
 
 from Field f, Class c
-where isFieldInThreadSafeAnnotatedClass(c, f)
+where isElementInThreadSafeAnnotatedClass(c, f)
 and isNotSafelyPublished(f)
 select f, "Is not safely published"

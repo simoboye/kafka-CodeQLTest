@@ -62,11 +62,13 @@ jobs:
         # queries: security-extended,security-and-quality
         config: |
           disable-default-queries: true
-          queries:
-            - uses: ./queries/synchronized.ql
-            - uses: ./queries/escaping.ql
-            - uses: ./queries/immutable-fields.ql
-            - uses: ./queries/publishment.ql
+          queries: ./queries
+          - exclude:
+              id: ./queries/codeql-repo
+            # - uses: ./queries/synchronized.ql
+            # - uses: ./queries/escaping.ql
+            # - uses: ./queries/immutable-fields.ql
+            # - uses: ./queries/publishment.ql
 
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
     # If this step fails, then you should remove it and run the build manually (see below)

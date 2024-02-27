@@ -3,7 +3,7 @@ Immutable field is accessed in a syncronzied block.
 
 
 ## Recommendation
-An immutable field doesn't need to be referenced in a syncronized way. If there is no other reason to do so, then consider removing the syncronization.
+An immutable field doesn't need to be referenced in a synchronized way. If there is no other reason to do so, then consider removing the syncronization.
 
 
 ## Example

@@ -30,7 +30,7 @@ predicate isImmutableField(Field f, Class c) {
 }
 
 from Field f, Class c
-where isFieldInThreadSafeAnnotatedClass(c, f)
+where isElementInThreadSafeAnnotatedClass(c, f)
 and isImmutableField(f, c)
 and locallySynchronizedOnThis(f.getAnAccess(), c) // Also finds objects that is syncronizing method calls.
-select f, "Is an immutable field, consider it not be accessed in a syncronized way"
+select f, "Is an immutable field, consider it not be accessed in a synchronized way"

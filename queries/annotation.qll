@@ -1,11 +1,6 @@
 import java
 
-predicate isFieldInThreadSafeAnnotatedClass(Class c, Field f) {
+predicate isElementInThreadSafeAnnotatedClass(Class c, Element e) {
   c.getAnAnnotation().toString() = "ThreadSafe"
-  and c.declaresField(f.getName())
-}
-
-predicate isMethodInThreadSafeAnnotatedClass(Class c, Method m) {
-  c.getAnAnnotation().toString() = "ThreadSafe"
-  and c.declaresMethod(m.getName()) // c.contains(ca)
+  and c.contains(e)
 }
